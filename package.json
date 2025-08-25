@@ -1,0 +1,17 @@
+{
+  "name": "rpni3-tp1-formulaire",
+  "version": "1.0.0",
+  "description": "Travail TP1 - Formulaire",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass --watch src/scss:public/css",
+    "build": "sass src/scss:public/css --style=expanded --source-map",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marie-Pierre Plante",
+  "license": "ISC",
+  "devDependencies": {
+    "normalize.scss": "^0.1.0",
+    "sass": "^1.90.0"
+  }
+}
