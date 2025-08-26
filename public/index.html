@@ -3,12 +3,55 @@
 
 <head>
     <meta charset="utf-8">
-
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    
+     <main role="main"></main>
+          <header role="banner">
+         <h1></h1>
+     </header> 
+
+       <fieldset class="etape1__section">
+           <legend>  <h2></h2> </legend>
+
+      </fieldset>
+
+
+     <fieldset class="etape2__section">
+           <legend>  <h2></h2> </legend>
+
+
+ //Nom
+               <p>
+                   <label for="label" class="">info:</label>
+                    <input type="text" id="id" name="name" pattern="[a-zA-ZÀ-ÿ '\-]{3,29}"
+                    title="Caractères alphanumérique & '-" required> 
+                    <span id="erreur__" class="message-erreur" role="alert"  aria-live="assertive"></span>
+              </p>
+// Entreprise 
+               <p>
+                   <label for="label" class="">info:</label>
+                    <input type="text" id="id" name="name" pattern="[a-zA-ZÀ-ÿ '\-]{3,29}"
+                    title="Caractères alphanumérique & '-" required> 
+                    <span id="erreur__" class="message-erreur" role="alert"  aria-live="assertive"></span>
+               </p>
+ // Email
+                <p>
+                    <label for="email" class="reservation__email">Email :</label>
+                    <input type="email" id="email" name="espace__email" autocomplete="email"  required>
+                    <span id="erreur__email" class="erreur" role="alert"  aria-live="polite"></span>
+                </p>
+ // Adresse
+                    <p>
+                   <label for="label" class="">info:</label>
+                    <input type="text" id="id" name="name" pattern="[a-zA-ZÀ-ÿ '\-]{3,29}"
+                    title="Caractères alphanumérique & '-" required> 
+                    <span id="erreur__" class="message-erreur" role="alert"  aria-live="assertive"></span>
+               </p>
+
+      </fieldset>
 </body>
 
 </html>
