@@ -10,48 +10,132 @@
 <body>
      <main role="main"></main>
           <header role="banner">
-         <h1></h1>
+         <h1>Faire un don</h1>
      </header> 
 
        <fieldset class="etape1__section">
-           <legend>  <h2></h2> </legend>
+           <legend>  <h2>Informations sur le don</h2> </legend>
 
-      </fieldset>
+
+   <!-- // TYPE DE VERSEMENTS-->
+     <fieldset class="versement__section">
+          <legend>Type de versement</legend>
+
+ <!-- // Versement unique -->
+         <div>
+            <input type="radio" id="versement__unique" name="versement__unique" value="versement__unique" required>
+            <label for="versement__unique">Versement unique</label>
+
+ <!-- // Versements periodiques -->
+            <input type="radio" id="versement__periodiques" name="versement__periodiques" value="versement__periodiques" required>
+            <label for="versement__periodiques">Versements periodiques</label>
+
+         </div>
+
+     </fieldset>
+
+   <!-- // TYPE DE MONTANT-->
+
+       <fieldset class="montant__section">
+          <legend>Type de montant</legend>
+
+ <!-- // Montant fixe -->
+            <p>
+                   <label for="label" class="choixMontant__fixe">Montant fixe:</label>
+                    <input type="text" id="montant__fixe" name="montant__fixe" max="9999" >
+                    <span id="erreur__montantfixe" class="message-erreur" role="alert" ></span>
+            </p>
+
+ <!-- // Montant variable -->
+            <p>
+                   <label for="label" class="choixMontant__variable">Montant variable:</label>
+                    <input type="text" id="montant__variable" name="montant__variable" max="9999" >
+                    <span id="erreur__montantvariable" class="message-erreur" role="alert" ></span> 
+            </p>
+
+       </fieldset>
+
+     </fieldset>
 
 
      <fieldset class="etape2__section">
-           <legend>  <h2></h2> </legend>
+           <legend>  <h2>Coordonnées</h2> </legend>
 
-
- //Nom
+ <!-- //Nom -->
                <p>
-                   <label for="label" class="">info:</label>
-                    <input type="text" id="id" name="name" pattern="[a-zA-ZÀ-ÿ '\-]{3,29}"
+                   <label for="label" class="donateur__nom">Nom:</label>
+                    <input type="text" id="name" name="espace__name" pattern="[a-zA-ZÀ-ÿ '\-]{3,29}"
                     title="Caractères alphanumérique & '-" required> 
-                    <span id="erreur__" class="message-erreur" role="alert"  aria-live="assertive"></span>
+                    <span id="erreur__nom" class="message-erreur" role="alert" ></span>
               </p>
-// Entreprise 
+<!-- // Entreprise  -->
                <p>
-                   <label for="label" class="">info:</label>
-                    <input type="text" id="id" name="name" pattern="[a-zA-ZÀ-ÿ '\-]{3,29}"
+                   <label for="label" class="donateur__entreprise"></label>Entreprise:</label>
+                    <input type="text" id="entreprise" name="espace__entreprise" pattern="[a-zA-ZÀ-ÿ '\-]{3,29}"
                     title="Caractères alphanumérique & '-" required> 
-                    <span id="erreur__" class="message-erreur" role="alert"  aria-live="assertive"></span>
+                    <span id="erreur__entreprise" class="message-erreur" role="alert" ></span>
                </p>
- // Email
-                <p>
-                    <label for="email" class="reservation__email">Email :</label>
-                    <input type="email" id="email" name="espace__email" autocomplete="email"  required>
-                    <span id="erreur__email" class="erreur" role="alert"  aria-live="polite"></span>
-                </p>
- // Adresse
+
+<!-- // Adresse -->
                     <p>
-                   <label for="label" class="">info:</label>
-                    <input type="text" id="id" name="name" pattern="[a-zA-ZÀ-ÿ '\-]{3,29}"
+                   <label for="label" class="">Adresse:</label>
+                    <input type="text" id="adresse" name="espace__adresse" pattern="[a-zA-ZÀ-ÿ '\-]{3,29}"
                     title="Caractères alphanumérique & '-" required> 
-                    <span id="erreur__" class="message-erreur" role="alert"  aria-live="assertive"></span>
+                    <span id="erreur__adresse" class="message-erreur" role="alert" ></span>
                </p>
+
+ <!-- // Email -->
+                <p>
+                    <label for="email" class="donateur__email">Email :</label>
+                    <input type="email" id="email" name="espace__email" autocomplete="email"  required>
+                    <span id="erreur__email" class="erreur" role="alert" ></span>
+                </p>
 
       </fieldset>
-</body>
 
+
+     <fieldset class="etape3__section">
+           <legend>  <h2>Information sur le paiement</h2> </legend>
+
+
+ <!-- // Nom sur la carte-->
+               <p>
+                   <label for="label" class="info__nomCarte">Carte de crédit:</label>
+                    <input type="text" id="nomCarte" name="espace__nomCarte"  pattern="[a-zA-ZÀ-ÿ '\-]{3,29} "
+                    title="Caractères alphanumérique & '-" required> 
+                    <span id="erreur__nomCarte" class="message-erreur" role="alert" ></span>
+              </p>
+
+
+ <!-- // Numéro de carte de credit -->
+              <p>
+                   <label for="label" class="info__numeroCarte">Numéro:</label>
+                    <input type="text" id="numeroCarte" name="espace__numeroCarte" pattern="^4[0-9]{12}(?:[0-9]{3})?$"
+                    title="Caractères alphanumérique & '-" required> 
+                    <span id="erreur__numeroCarte" class="message-erreur" role="alert" ></span>
+              </p>
+              
+<!-- // Expiration de la carte de crédit -->
+               <p>
+                   <label for="label" class="info__expirationCarte">Expiration:</label>
+                    <input type="text" id="expirationCarte" name="espace__expirationCarte"  pattern="^(0[1-9]|1[0-2]) \/ \d{2}$" 
+                    title="Caractères alphanumérique & '-" required> 
+                    <span id="erreur__expirationCarte" class="message-erreur" role="alert" ></span>
+           
+              </p>
+
+<!-- // Validation de la carte de crédit -->
+               <p>
+                   <label for="label" class="info__expirationCarte"> Validation:</label>
+                    <input type="text" id="validationCarte" name="espace__validationCarte" pattern="[0-9]{3,4}" maxlength="4" 
+                    title="Caractères alphanumérique & '-" required> 
+                    <span id="erreur__validationCarte" class="message-erreur" role="alert" ></span>
+              </p>
+
+      </fieldset>
+
+        <button type="submit" class="button__soumettre">Soumettre</button>
+
+
+</body>
 </html>
