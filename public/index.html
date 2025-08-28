@@ -5,6 +5,8 @@
     <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/scripts.js" ></script>
+    <title>Formulaire de don</title>
 </head>
 
 <body>
@@ -23,12 +25,12 @@
 
  <!-- // Versement unique -->
          <div>
-            <input type="radio" id="versement__unique" name="versement__unique" value="versement__unique" required>
-            <label for="versement__unique">Versement unique</label>
+            <input type="radio" id="versement__unique" name="versement__infos" value="versement__unique" required>
+            <label for="versement__unique">Don unique</label>
 
  <!-- // Versements periodiques -->
-            <input type="radio" id="versement__periodiques" name="versement__periodiques" value="versement__periodiques" required>
-            <label for="versement__periodiques">Versements periodiques</label>
+            <input type="radio" id="versement__periodiques" name="versement__infos" value="versement__periodiques" required>
+            <label for="versement__periodiques">Dons mensuels</label>
 
          </div>
 
@@ -38,22 +40,39 @@
 
        <fieldset class="montant__section">
           <legend>Type de montant</legend>
+          
+<!-- // Montant fixe -->
+   
+         <div>
+            <label for="label" class="montantfixe__section">Montant prédéfinis:</label>
 
- <!-- // Montant fixe -->
-            <p>
-                   <label for="label" class="choixMontant__fixe">Montant fixe:</label>
-                    <input type="text" id="montant__fixe" name="montant__fixe" max="9999" >
-                    <span id="erreur__montantfixe" class="message-erreur" role="alert" ></span>
-            </p>
+            <input type="radio" id="montant__fixe1" name="montant__fixe" value="montant__fixe" required>
+            <label for="montant__fixe">25</label>
+
+            <input type="radio" id="montant__fixe2" name="montant__fixe" value="montant__fixe" required>
+            <label for="montant__fixe">50</label>
+
+            <input type="radio" id="montant__fixe3" name="montant__fixe" value="montant__fixe" required>
+            <label for="montant__fixe">100</label>
+
+            <input type="radio" id="montant__fixe4" name="montant__fixe" value="montant__fixe" required>
+            <label for="montant__fixe">150</label>
+
+         </div>
+
+    
 
  <!-- // Montant variable -->
             <p>
-                   <label for="label" class="choixMontant__variable">Montant variable:</label>
-                    <input type="text" id="montant__variable" name="montant__variable" max="9999" >
+                   <label for="label" class="choixMontant__variable">Montant personnalisé:</label>
+                    <input type="number" id="montant__variable" name="montant__variable" max="9999" >
                     <span id="erreur__montantvariable" class="message-erreur" role="alert" ></span> 
             </p>
 
        </fieldset>
+
+            <button type="button" id="button__suivant">Suivant</button>
+      
 
      </fieldset>
 
@@ -91,6 +110,9 @@
                     <span id="erreur__email" class="erreur" role="alert" ></span>
                 </p>
 
+    <button type="button" id="button__precedent">Précédent</button>
+    <button type="button" id="button__suivant">Suivant</button>
+ 
       </fieldset>
 
 
@@ -100,7 +122,7 @@
 
  <!-- // Nom sur la carte-->
                <p>
-                   <label for="label" class="info__nomCarte">Carte de crédit:</label>
+                   <label for="label" class="info__nomCarte">Nom sur carte:</label>
                     <input type="text" id="nomCarte" name="espace__nomCarte"  pattern="[a-zA-ZÀ-ÿ '\-]{3,29} "
                     title="Caractères alphanumérique & '-" required> 
                     <span id="erreur__nomCarte" class="message-erreur" role="alert" ></span>
@@ -110,7 +132,7 @@
  <!-- // Numéro de carte de credit -->
               <p>
                    <label for="label" class="info__numeroCarte">Numéro:</label>
-                    <input type="text" id="numeroCarte" name="espace__numeroCarte" pattern="^4[0-9]{12}(?:[0-9]{3})?$"
+                    <input  inputmode="numeric"  id="numeroCarte" name="espace__numeroCarte" pattern="^4[0-9]{12}(?:[0-9]{3})?$" maxlength="16" 
                     title="Caractères alphanumérique & '-" required> 
                     <span id="erreur__numeroCarte" class="message-erreur" role="alert" ></span>
               </p>
@@ -132,11 +154,17 @@
                     <span id="erreur__validationCarte" class="message-erreur" role="alert" ></span>
               </p>
 
+               <button type="button" id="button__precedent">Précédent</button>
+               <button type="button" id="button__suivant">Suivant</button>
+
       </fieldset>
 
 
      <fieldset class="etape4__section">
            <legend>  <h2>Résumé du don</h2> </legend>
+
+               <button type="button" id="button__precedent">Précédent</button>
+               <button type="button" id="button__suivant">Suivant</button>
 
      </fieldset>
 
