@@ -12,20 +12,30 @@
 
 
 <body>
-     <main role="main"></main>
-          <header role="banner">
+
+     <header role="banner">
          <h1>Informations sur le don</h1>
      </header> 
+          <main role="main">
+
+    <nav class="progression__section" aria-label="Progression du formulaire">
+        <div class="etapes__section">
+            <div id="etat-etape1" class="etat-etape">1</div>
+            <div id="etat-etape2" class="etat-etape">2</div>
+            <div id="etat-etape3" class="etat-etape">3</div>
+        </div>
+    </nav>
 
      <form class="formulaire__section" action="merci.html" method="get">
 
        <fieldset class="etape1">
-           <legend>  <h2>Type de versement</h2> </legend>
+    
 
 
    <!-- // TYPE DE VERSEMENTS-->
-     <fieldset class="versement__section">
-          <legend>Modalité de versement</legend>
+     <div class="versement__section">
+        <h2>Type de versement</h2> 
+          <h3>Modalité de versement</h3>
 
  <!-- // Versement unique -->
          <div>
@@ -38,12 +48,12 @@
 
          </div>
 
-     </fieldset>
+        </div>
 
    <!-- // TYPE DE MONTANT-->
 
-       <fieldset class="montant__section">
-          <legend>Type de montant</legend>
+       <div class="montant__section">
+          <h3>Type de montant</h3>
           
 <!-- // Montant fixe -->
    
@@ -73,16 +83,11 @@
                     <span id="erreur__montantvariable" class="message-erreur" role="alert" ></span> 
             </p>
 
-       </fieldset>
-
-            <button type="button" id="button__suivant1" class="bouton__suivant" >Suivant</button>
       
 
-     </fieldset>
 
-
-     <fieldset class="etape2">
-           <legend>  <h2>Coordonnées</h2> </legend>
+   <div class="coordonné__section">
+         <h2>Coordonnées</h2>
 
 
  <!-- // Email -->
@@ -174,17 +179,18 @@
                     title="Caractères alphanumérique & '-" required> 
                     <span id="erreur__entreprise" class="message-erreur" role="alert" aria-live="polite"></span>
                </p>
+            </div>
 
 
 
 
-    <button type="button" id="button__precedent1" class="bouton__precedent">Précédent</button>
-    <button type="button" id="button__suivant2" class="bouton__suivant">Suivant</button>
+    <button type="button" class="bouton__precedent">Précédent</button>
+    <button type="button"  class="bouton__suivant">Suivant</button>
  
       </fieldset>
 
 
-     <fieldset class="etape3">
+     <fieldset class="etape2  ">
            <legend>  <h2>Information sur le paiement</h2> </legend>
 
 
@@ -222,24 +228,22 @@
                     <span id="erreur__validationCarte" class="message-erreur" role="alert "aria-live="polite" ></span>
               </p>
 
-               <button type="button" id="button__precedent2" class="bouton__precedent">Précédent</button>
-               <button type="button" id="button__suivant3" class="bouton__suivant">Suivant</button>
+               <button type="button" class="bouton__precedent">Précédent</button>
+               <button type="button" class="bouton__suivant">Suivant</button>
 
       </fieldset>
 
 
-     <fieldset class="etape4__section">
+     <fieldset class="etape3">
            <legend>  <h2>Résumé du don</h2> </legend>
 
-               <button type="button" id="button__precedent3" class="bouton__precedent">Précédent</button>
-               <button type="button" id="button__suivant4" class="bouton__suivant">Suivant</button>
+               <button type="button"  class="bouton__precedent">Précédent</button>
+                   <button type="submit" class="button__soumettre">Soumettre</button>
 
      </fieldset>
+ 
 
-
-    
-     <button type="submit" id="button__soumettre">Soumettre</button>
-    
+    </main>
     </form>
 
 

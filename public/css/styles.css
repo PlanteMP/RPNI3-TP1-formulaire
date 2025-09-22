@@ -669,4 +669,15 @@ h3--desktop,
   display: none;
 }
 
+.etat-etape {
+  transition: 0.3s ease;
+}
+
+.etat-etape--mise-en-evidence {
+  background-color: #123355;
+  border-radius: 3px;
+  color: white;
+  opacity: 1;
+}
+
 /*# sourceMappingURL=styles.css.map */
