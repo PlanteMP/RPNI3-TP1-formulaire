@@ -47,13 +47,51 @@
 .cacher {
   display: none;
 }
+
+
+// SPAN
 .etat-etape {
+  display: inline-block;
+  text-align: center;
+  margin: 020px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: 2px solid black;
+  border-radius: 50%;
+  font-size: 16px;
   transition: 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .etat-etape--mise-en-evidence {
   background-color: #123355;
-  border-radius: 3px;
+  border-radius: 50%;
   color: white;
   opacity: 1;
+}
+
+.etat-etape:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+
+// 
+// Page background gradient
+body {
+  background: #7D2E33;
+}
+
+fieldset {
+  background: #7FA0CA;
+}
+
+.versement__section {
+background: #B2C9EE;
+}
+
+.coordonné__section {
+background: #B2C9EE;
 }

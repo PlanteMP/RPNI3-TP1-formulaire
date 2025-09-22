@@ -475,31 +475,10 @@ th {
 * @todo Compléter selon l'énoncé de l'exercice
 */
 .bouton {
-  background-color: #bbd531;
   border-radius: 18px;
   color: black;
   padding: 0.5em 1em;
   text-decoration: none;
-}
-.bouton:after {
-  content: "»";
-  margin-left: 0.4em;
-}
-.bouton--hover {
-  background-color: rgba(187, 213, 49, 0.75);
-}
-.bouton--active {
-  background-color: rgba(187, 213, 49, 0.5);
-}
-.bouton--inverse {
-  background-color: white;
-  border: 2px solid #bbd531;
-}
-.bouton--inverse--hover {
-  border-color: rgba(187, 213, 49, 0.75);
-}
-.bouton--inverse--active {
-  border-color: rgba(187, 213, 49, 0.5);
 }
 
 /** UTILITAIRES **/
@@ -508,19 +487,7 @@ th {
 * @todo Compléter selon l'énoncé de l'exercice
 */
 .hyperlien {
-  color: #2678B5;
   text-decoration: none;
-}
-.hyperlien--visited {
-  color: rgb(33.5753424658, 106.0273972603, 159.9246575342);
-}
-.hyperlien--hover {
-  color: rgb(20.301369863, 64.1095890411, 96.698630137);
-  text-decoration: underline;
-}
-.hyperlien--active {
-  color: #bbd531;
-  text-decoration: underline;
 }
 
 /** UTILITAIRES **/
@@ -566,7 +533,6 @@ h1--desktop,
 }
 h1--desktop:after,
 .titreNiveau1--desktop:after {
-  background-color: #358ae0;
   content: "";
   display: inline-block;
   width: 150px;
@@ -670,14 +636,47 @@ h3--desktop,
 }
 
 .etat-etape {
+  display: inline-block;
+  text-align: center;
+  margin: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: 2px solid black;
+  border-radius: 50%;
+  font-size: 16px;
   transition: 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .etat-etape--mise-en-evidence {
   background-color: #123355;
-  border-radius: 3px;
+  border-radius: 50%;
   color: white;
   opacity: 1;
+}
+
+.etat-etape:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+
+body {
+  background: #7D2E33;
+}
+
+fieldset {
+  background: #7FA0CA;
+}
+
+.versement__section {
+  background: #B2C9EE;
+}
+
+.coordonné__section {
+  background: #B2C9EE;
 }
 
 /*# sourceMappingURL=styles.css.map */

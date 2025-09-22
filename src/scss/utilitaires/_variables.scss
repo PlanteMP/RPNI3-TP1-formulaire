@@ -12,27 +12,26 @@
 
 @font-face {
   font-family: Futura, sans-serif;
-  src: 	url('../fonts/Futura.ttc') format('truetype');
+  src: url("../fonts/Futura.ttc") format("truetype");
 }
 
-$fontePrimaire : Futura, sans-serif;
-$fonteSecondaire : Arial, sans-serif;
+$fontePrimaire: Futura, sans-serif;
+$fonteSecondaire: Arial, sans-serif;
 
 /** Palette de couleurs **/
 // Utiliser http://chir.ag/projects/name-that-color pour obtenir des noms uniques et mémorisables
 // Permettez-vous d'utiliser un nom de variable plus explicite si la suggestion de name-that-color est trop étrange
 
 /* Couleurs de base */
-$bleuMoyen: #358ae0;
-$bleuPale: #68a8e8;
-$vertLime: #bbd531;
-$bleuMinuit: #012d61;
-$bleuMarin: #2678B5;
-
-$bleuMoyenTransparent : color.adjust($bleuMoyen, $alpha: -0.50);
+$rougeVin: #7d2e33;
+$bleufoncer: #7fa0ca;
+$bleuPale: #b2c9ee;
+$bleuStroke: #466183;
+$bleuSpan: #05204c;
+$noir: #273651;
+$blanc: #ffffff;
 
 /* Autres couleurs */
-$hyperlien: $bleuMarin;
 
 /** Points de rupture **/
-$desktop : 601px;
+$desktop: 601px;

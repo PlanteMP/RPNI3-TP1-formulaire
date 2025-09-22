@@ -14,28 +14,29 @@
 <body>
 
      <header role="banner">
-         <h1>Informations sur le don</h1>
      </header> 
           <main role="main">
 
     <nav class="progression__section" aria-label="Progression du formulaire">
         <div class="etapes__section">
-            <div id="etat-etape1" class="etat-etape">1</div>
-            <div id="etat-etape2" class="etat-etape">2</div>
-            <div id="etat-etape3" class="etat-etape">3</div>
+            <span "etat-etape1" class="etat-etape">1</span>
+            <span id="etat-etape2" class="etat-etape">2</span>
+            <span id="etat-etape3" class="etat-etape">3</span>
         </div>
     </nav>
 
      <form class="formulaire__section" action="merci.html" method="get">
 
+      
        <fieldset class="etape1">
-    
-
+        <legend>  <h1>Information sur le don</h1> </legend>
 
    <!-- // TYPE DE VERSEMENTS-->
      <div class="versement__section">
         <h2>Type de versement</h2> 
-          <h3>Modalité de versement</h3>
+
+          <div class="modalieVersement__section">
+             <h3>Modalité de versement</h3>
 
  <!-- // Versement unique -->
          <div>
@@ -47,8 +48,9 @@
             <label for="versement__periodiques">Dons mensuels</label>
 
          </div>
+         </div>
 
-        </div>
+      
 
    <!-- // TYPE DE MONTANT-->
 
@@ -82,7 +84,7 @@
                     <input type="number" id="montant__variable" name="montant__variable" max="9999" >
                     <span id="erreur__montantvariable" class="message-erreur" role="alert" ></span> 
             </p>
-
+  </div>
       
 
 
@@ -190,8 +192,8 @@
       </fieldset>
 
 
-     <fieldset class="etape2  ">
-           <legend>  <h2>Information sur le paiement</h2> </legend>
+     <fieldset class="etape2">
+           <legend>  <h1>Information sur le paiement</h1> </legend>
 
 
  <!-- // Nom sur la carte-->
@@ -235,7 +237,7 @@
 
 
      <fieldset class="etape3">
-           <legend>  <h2>Résumé du don</h2> </legend>
+           <legend>  <h1>Résumé du don</h1> </legend>
 
                <button type="button"  class="bouton__precedent">Précédent</button>
                    <button type="submit" class="button__soumettre">Soumettre</button>
