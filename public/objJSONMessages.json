@@ -1,0 +1,45 @@
+{
+  "courriel": {
+    "vide": "Vous devez entrer votre adresse courriel.",
+    "pattern": "Assurez-vous d'entrer une adresse courriel valide."
+  },
+
+  "nom": {
+    "vide": "Vous devez entrer votre nom de famille.",
+    "pattern": "Pour le nom de famille, les accents français, les espaces, les tirets et les apostrophes sont permis."
+  },
+
+  "prenom": {
+    "vide": "Vous devez entrer votre prénom.",
+    "pattern": "Pour le prénom, les accents français, les espaces, les tirets et les apostrophes sont permis."
+  },
+
+  "adresse": {
+    "vide": "Vous devez entrer votre adresse.",
+    "pattern": "Assurez-vous d'entrer une adresse valide."
+  },
+
+  "ville": {
+    "vide": "Vous devez entrer votre ville.",
+    "pattern": "Assurez-vous d'entrer une ville valide."
+  },
+
+  "province": {
+    "vide": "Vous devez entrer votre province.",
+    "pattern": "Assurez-vous d'entrer une province valide."
+  },
+
+  "pays": {
+    "vide": "Vous devez entrer votre pays.",
+    "pattern": "Assurez-vous d'entrer un pays valide."
+  },
+
+  "codepostal": {
+    "vide": "Vous devez entrer votre code postal.",
+    "pattern": "Assurez-vous d'entrer un code postal valide."
+  },
+
+  "entreprise": {
+    "pattern": "Assurez-vous d'entrer une adresse valide."
+  }
+}

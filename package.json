@@ -4,14 +4,15 @@
   "description": "Travail TP1 - Formulaire",
   "main": "index.js",
   "scripts": {
-    "watch": "sass --watch src/scss:public/css",
-    "build": "sass src/scss:public/css --style=expanded --source-map",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "concurrently \"sass src/scss:public/css --source-map --watch\" \"tsc --watch\"",
+    "build": "concurrently \"sass src/scss:public/css --style=expanded --source-map\" \"tsc\""
   },
   "author": "Marie-Pierre Plante",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^9.2.1",
     "normalize.scss": "^0.1.0",
-    "sass": "^1.90.0"
+    "sass": "^1.90.0",
+    "typescript": "^5.9.2"
   }
 }

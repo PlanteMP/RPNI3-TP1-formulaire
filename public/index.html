@@ -2,26 +2,30 @@
 <html lang="fr-CA">
 
 <head>
-    <meta charset="utf-8">
+
+ <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <script defer src="js/scripts.js" ></script>
+    <script defer src="js/scripts.js"></script>
     <title>Formulaire de don</title>
 </head>
+
 
 <body>
      <main role="main"></main>
           <header role="banner">
-         <h1>Faire un don</h1>
+         <h1>Informations sur le don</h1>
      </header> 
 
-       <fieldset class="etape1__section">
-           <legend>  <h2>Informations sur le don</h2> </legend>
+     <form class="formulaire__section" action="merci.html" method="get">
+
+       <fieldset class="etape1">
+           <legend>  <h2>Type de versement</h2> </legend>
 
 
    <!-- // TYPE DE VERSEMENTS-->
      <fieldset class="versement__section">
-          <legend>Type de versement</legend>
+          <legend>Modalité de versement</legend>
 
  <!-- // Versement unique -->
          <div>
@@ -44,7 +48,7 @@
 <!-- // Montant fixe -->
    
          <div>
-            <label for="label" class="montantfixe__section">Montant prédéfinis:</label>
+            <label for="montantfixe__section" class="montantfixe__section">Montant prédéfinis:</label>
 
             <input type="radio" id="montant__fixe1" name="montant__fixe" value="montant__fixe" required>
             <label for="montant__fixe">25</label>
@@ -64,98 +68,162 @@
 
  <!-- // Montant variable -->
             <p>
-                   <label for="label" class="choixMontant__variable">Montant personnalisé:</label>
+                   <label for="montant__variable" class="choixMontant__variable">Montant personnalisé:</label>
                     <input type="number" id="montant__variable" name="montant__variable" max="9999" >
                     <span id="erreur__montantvariable" class="message-erreur" role="alert" ></span> 
             </p>
 
        </fieldset>
 
-            <button type="button" id="button__suivant">Suivant</button>
+            <button type="button" id="button__suivant1" class="bouton__suivant" >Suivant</button>
       
 
      </fieldset>
 
 
-     <fieldset class="etape2__section">
+     <fieldset class="etape2">
            <legend>  <h2>Coordonnées</h2> </legend>
+
+
+ <!-- // Email -->
+                <p>
+                    <label for="email" class="donateur__email">Courriel :</label>
+                    <input type="email" id="email" name="espace__email" autocomplete="email"  pattern="[\w\.\-]+@([\w\-]+)((\.(\w){2,3})+)$" required>
+                    <span id="erreur__email" class="erreur" role="alert" aria-live="polite" ></span>
+                </p>           
 
  <!-- //Nom -->
                <p>
-                   <label for="label" class="donateur__nom">Nom:</label>
-                    <input type="text" id="name" name="espace__name" pattern="[a-zA-ZÀ-ÿ '\-]{3,29}"
+                   <label for="nom" class="donateur__nom">Nom:</label>
+                    <input type="text" id="nom" name="espace__nom" pattern="[a-zA-ZÀ-ÿ '\-]{3,29}"
                     title="Caractères alphanumérique & '-" required> 
-                    <span id="erreur__nom" class="message-erreur" role="alert" ></span>
+                    <span id="erreur__nom" class="message-erreur" role="alert" aria-live="polite"></span>
               </p>
+
+ <!-- //Prénom -->
+               <p>
+                   <label for="prenom" class="donateur__prenom">Prénom:</label>
+                    <input type="text" id="prenom" name="espace__prenom" pattern="[a-zA-ZÀ-ÿ '\-]{3,29}"
+                    title="Caractères alphanumérique & '-" required> 
+                    <span id="erreur__prenom" class="message-erreur" role="alert". aria-live="polite" ></span>
+              </p>    
+
+<!-- // Adresse -->
+                    <p>
+                   <label for="adresse" class="donateur__adresse">Adresse:</label>
+                    <input type="text" id="adresse" name="espace__adresse" pattern="[a-zA-ZÀ-ÿ '\-]{3,29}"
+                    title="Caractères alphanumérique & '-" required> 
+                    <span id="erreur__adresse" class="message-erreur" role="alert" aria-live="polite" ></span>
+               </p>
+
+ 
+ <!-- //Ville-->
+               <p>
+                   <label for="ville" class="donateur__ville">Ville:</label>
+                    <input type="text" id="ville" name="espace__ville" pattern="[a-zA-ZÀ-ÿ '\-]{3,29}"
+                    title="Caractères alphanumérique & '-" required> 
+                    <span id="erreur__ville" class="message-erreur" role="alert"aria-live="polite" ></span>
+              </p>     
+
+
+<!-- //Province-->
+     
+               <p>
+                   <label for="province" class="donateur__provinces">Pays:</label>
+                   <select id="provinces" name="espace__provinces" required>
+                     <option value="">  Choisir votre province </option>
+                     <option value="alberta">Alberta</option>
+                     <option value="manitoba">Manitoba</option>
+                     <option value="newBrunswick">New Brunswick</option>
+                     <option value="labrador">Labrador</option>
+                      <option value="novaScotia">Nova Scotia </option>
+                       <option value="princeEdwardIsland">Prince Edward Island</option>
+                        <option value="quebec">Quebec</option>
+                        <option value="Saskatchewan">Saskatchewan</option>
+                   </select>
+              </p>           
+
+
+  <!-- //Pays-->
+               <p>
+                   <label for="pays" class="donateur__pays">Pays:</label>
+                   <select id="pays" name="espace__pays" required>
+                     <option value="">  Choisir votre pays </option>
+                     <option value="canada">Canada</option>
+                     <option value="france">France</option>
+                     <option value="etats-unis">États-Unis</option>
+                     <option value="autre">Autre</option>
+                   </select>
+              </p>           
+
+
+ <!-- // Adresse -->
+                    <p>
+                   <label for="label" class="donateur__codepostal">Code postal:</label>
+                    <input type="text" id="codePostal" name="espace__codePostal" pattern="^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ -]?\d[ABCEGHJ-NPRSTV-Z]\d$"
+                    title="Caractères alphanumérique & '-" required> 
+                    <span id="erreur__codePostal" class="message-erreur" role="alert" aria-live="polite" ></span>
+               </p>
+       
+              
+
 <!-- // Entreprise  -->
                <p>
                    <label for="label" class="donateur__entreprise"></label>Entreprise:</label>
                     <input type="text" id="entreprise" name="espace__entreprise" pattern="[a-zA-ZÀ-ÿ '\-]{3,29}"
                     title="Caractères alphanumérique & '-" required> 
-                    <span id="erreur__entreprise" class="message-erreur" role="alert" ></span>
+                    <span id="erreur__entreprise" class="message-erreur" role="alert" aria-live="polite"></span>
                </p>
 
-<!-- // Adresse -->
-                    <p>
-                   <label for="label" class="">Adresse:</label>
-                    <input type="text" id="adresse" name="espace__adresse" pattern="[a-zA-ZÀ-ÿ '\-]{3,29}"
-                    title="Caractères alphanumérique & '-" required> 
-                    <span id="erreur__adresse" class="message-erreur" role="alert" ></span>
-               </p>
 
- <!-- // Email -->
-                <p>
-                    <label for="email" class="donateur__email">Email :</label>
-                    <input type="email" id="email" name="espace__email" autocomplete="email"  required>
-                    <span id="erreur__email" class="erreur" role="alert" ></span>
-                </p>
 
-    <button type="button" id="button__precedent">Précédent</button>
-    <button type="button" id="button__suivant">Suivant</button>
+
+    <button type="button" id="button__precedent1" class="bouton__precedent">Précédent</button>
+    <button type="button" id="button__suivant2" class="bouton__suivant">Suivant</button>
  
       </fieldset>
 
 
-     <fieldset class="etape3__section">
+     <fieldset class="etape3">
            <legend>  <h2>Information sur le paiement</h2> </legend>
 
 
  <!-- // Nom sur la carte-->
-               <p>
+               <!-- <p>
                    <label for="label" class="info__nomCarte">Nom sur carte:</label>
                     <input type="text" id="nomCarte" name="espace__nomCarte"  pattern="[a-zA-ZÀ-ÿ '\-]{3,29} "
                     title="Caractères alphanumérique & '-" required> 
                     <span id="erreur__nomCarte" class="message-erreur" role="alert" ></span>
-              </p>
+              </p> -->
 
 
  <!-- // Numéro de carte de credit -->
               <p>
-                   <label for="label" class="info__numeroCarte">Numéro:</label>
+                   <label for="label" class="info__numeroCarte">Numéro de carte:</label>
                     <input  inputmode="numeric"  id="numeroCarte" name="espace__numeroCarte" pattern="^4[0-9]{12}(?:[0-9]{3})?$" maxlength="16" 
                     title="Caractères alphanumérique & '-" required> 
-                    <span id="erreur__numeroCarte" class="message-erreur" role="alert" ></span>
+                    <span id="erreur__numeroCarte" class="message-erreur" role="alert" aria-live="polite"></span>
               </p>
               
 <!-- // Expiration de la carte de crédit -->
                <p>
-                   <label for="label" class="info__expirationCarte">Expiration:</label>
+                   <label for="label" class="info__expirationCarte">Date d’expiration:</label>
                     <input type="text" id="expirationCarte" name="espace__expirationCarte"  pattern="^(0[1-9]|1[0-2]) \/ \d{2}$" 
                     title="Caractères alphanumérique & '-" required> 
-                    <span id="erreur__expirationCarte" class="message-erreur" role="alert" ></span>
+                    <span id="erreur__expirationCarte" class="message-erreur" role="alert" aria-live="polite"></span>
            
               </p>
 
 <!-- // Validation de la carte de crédit -->
                <p>
-                   <label for="label" class="info__expirationCarte"> Validation:</label>
+                   <label for="label" class="info__expirationCarte"> Code de sécurité:</label>
                     <input type="text" id="validationCarte" name="espace__validationCarte" pattern="[0-9]{3,4}" maxlength="4" 
                     title="Caractères alphanumérique & '-" required> 
-                    <span id="erreur__validationCarte" class="message-erreur" role="alert" ></span>
+                    <span id="erreur__validationCarte" class="message-erreur" role="alert "aria-live="polite" ></span>
               </p>
 
-               <button type="button" id="button__precedent">Précédent</button>
-               <button type="button" id="button__suivant">Suivant</button>
+               <button type="button" id="button__precedent2" class="bouton__precedent">Précédent</button>
+               <button type="button" id="button__suivant3" class="bouton__suivant">Suivant</button>
 
       </fieldset>
 
@@ -163,14 +231,16 @@
      <fieldset class="etape4__section">
            <legend>  <h2>Résumé du don</h2> </legend>
 
-               <button type="button" id="button__precedent">Précédent</button>
-               <button type="button" id="button__suivant">Suivant</button>
+               <button type="button" id="button__precedent3" class="bouton__precedent">Précédent</button>
+               <button type="button" id="button__suivant4" class="bouton__suivant">Suivant</button>
 
      </fieldset>
 
 
     
-     <button type="submit" class="button__soumettre">Soumettre</button>
+     <button type="submit" id="button__soumettre">Soumettre</button>
+    
+    </form>
 
 
 </body>
