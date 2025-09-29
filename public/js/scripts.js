@@ -58,6 +58,10 @@ function afficherEtape() {
         boutonSoumettre?.classList.remove('cacher');
     }
 }
+// Messages d'erreurs 
+/*
+ * Fonction pour valider les champs
+ */
 // Changement navigation suivante 
 function navigationSuivante(event) {
     event.preventDefault();

@@ -1,7 +1,18 @@
 @charset "UTF-8";
+$rougeVin: #7d2e33;
+$bleufoncer: #7fa0ca;
+$bleuPale: #b2c9ee;
+$bleuStroke: #466183;
+$bleuSpan: #05204c;
+$noir: #000000;
+$blanc: #ffffff;
+$couleur-bouton: #22355a;
+$couleur-boutonhover:  #05204c;
+$bleuInputHover: #5b7faa6b;
+
 
 /**
- * @author Prenom Nom courriel
+ * @author Marie-Pierre Plante
  * @todo Lier les modules avec des instructions @import
  * @todo Compléter selon l'énoncé de l'exercice
  */
@@ -43,32 +54,47 @@
 @use "base/typo";
 @use "base/grille";
 
+
+
 /** MODULES **/
 .cacher {
   display: none;
 }
 
 
-// SPAN
+
+// MOBILE FIRST
+
+//* Span Etape de section *//
+
+.etapes__section {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  gap: 1rem;              
+  margin: 1.5rem 0;        
+}
+
 .etat-etape {
+  background-color: $blanc;
+  display: inline-flex;
+  margin: 1.5rem 0;  
   display: inline-block;
   text-align: center;
   margin: 020px;
   width: 40px;
   height: 40px;
   line-height: 40px;
-  border: 2px solid black;
+  border: 2px solid $noir;
   border-radius: 50%;
-  font-size: 16px;
   transition: 0.3s ease;
-  position: relative;
-  z-index: 2;
+
 }
 
 .etat-etape--mise-en-evidence {
-  background-color: #123355;
+  background-color: $bleuSpan;
   border-radius: 50%;
-  color: white;
+  color: $blanc;
   opacity: 1;
 }
 
@@ -78,20 +104,144 @@
   transition: 0.3s ease;
 }
 
-// 
-// Page background gradient
+//* Page background et couleur de base *//
+
 body {
-  background: #7D2E33;
+  background: $rougeVin;
+  
 }
 
 fieldset {
-  background: #7FA0CA;
+  background: $bleufoncer;
+  
+  
 }
 
+
+
+// Section informations - TYPE VERSEMENT, COORDONNÉES, INFO PAIEMENT, RESUME DU DON
 .versement__section {
-background: #B2C9EE;
+background: $bleuPale;
+  border-radius: 1rem;
+  padding: 2rem;
+
+  h2 {
+    margin:0;
+
+  }
+}
+.coordonné__section {
+background: $bleuPale;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-top: 2.5rem;
 }
 
-.coordonné__section {
-background: #B2C9EE;
+.informationPaiement__section {
+  background: $bleuPale;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-top: 0.5rem;
+  padding-top: 0.2rem;
+
+  
+}
+
+
+
+//* Fieldset *//
+.formulaire__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  
+
+  fieldset {
+    width: 100%;
+    max-width: 21.25rem; 
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    
+   
+
+    legend { 
+ 
+      text-align: center;
+      margin-bottom: 1rem;
+   
+    }
+
+    input {
+    border-radius: 0.5rem;
+
+     &:hover {
+      background-color: $bleuInputHover;
+  }
+
+    }
+  }
+}
+
+// BOUTONS 
+
+.bouton__precedent {
+  background-color: $couleur-bouton;
+  color: $blanc;
+  border-radius: 1rem;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  padding-top: 1rem;  
+
+  &:hover {
+    background-color: $couleur-boutonhover;
+  }
+}
+
+.bouton__suivant {
+ background-color: $couleur-bouton;
+  color: $blanc;
+  border-radius: 1rem;
+  padding: 0.5em 1em;
+  text-decoration: none;
+ margin-top: 3rem;  
+
+
+  &:hover {
+    background-color: $couleur-boutonhover;
+  }
+}
+
+.button__soumettre {
+ background-color: $couleur-bouton;
+  color: $blanc;
+  border-radius: 1rem;
+  padding: 0.5em 1em;
+  text-decoration: none;
+
+
+
+  &:hover {
+    background-color: $couleur-boutonhover;
+    
+  }
+
+}
+
+
+
+
+
+// FORMAT TABLE
+//* Fieldset *//
+@media (min-width: 361px) {
+  .formulaire__section {
+    fieldset {
+      max-width: 45rem; 
+      padding: 2rem;
+
+   
+    }
+  }
 }

@@ -1,11 +1,14 @@
 
 
 // Test & initialisation du DOM
+
 document.addEventListener("DOMContentLoaded", () => {
     console.log("DOM entièrement chargé et analysé");
     initialisationFormulaire();
 
 });
+
+
 
 
 // Declaration des variables 
@@ -79,6 +82,12 @@ function afficherEtape(): void {
     }
 
 }
+
+// Messages d'erreurs 
+
+/*
+ * Fonction pour valider les champs
+ */
 
 
 

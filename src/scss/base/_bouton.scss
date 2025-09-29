@@ -1,14 +1,26 @@
 @use "sass:color";
 @use "../utilitaires/variables";
+@use "../utilitaires/mixins";
+$couleur-bouton: #273651;
+$couleur-boutonhover:  #05204c;
 
 /**
-* @author Prenom Nom courriel
+* @author Marie-Pierre Plante
 * @todo Compléter selon l'énoncé de l'exercice
 */
+
 
 .bouton {
   border-radius: 18px;
   color: black;
   padding: 0.5em 1em;
   text-decoration: none;
+  background-color: $couleur-bouton;
+  font-size: 0.9rem;
+
+  &:hover {
+    background-color: $couleur-boutonhover;
+  }
 }
+
+

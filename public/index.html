@@ -13,29 +13,31 @@
 
 <body>
 
-     <header role="banner">
-     </header> 
-          <main role="main">
+ <header>
+    
+ </header> 
+    <main>
 
     <nav class="progression__section" aria-label="Progression du formulaire">
-        <div class="etapes__section">
-            <span "etat-etape1" class="etat-etape">1</span>
+        <nav class="etapes__section">
+            <span id="etat-etape1" class="etat-etape">1</span>
             <span id="etat-etape2" class="etat-etape">2</span>
             <span id="etat-etape3" class="etat-etape">3</span>
-        </div>
+        </nav>
     </nav>
 
      <form class="formulaire__section" action="merci.html" method="get">
 
-      
-       <fieldset class="etape1">
+         <!-- //        PREMIERE ETAPE DU FORMULAIRE                  // -->
+
+       <fieldset class="etape1" >
         <legend>  <h1>Information sur le don</h1> </legend>
 
    <!-- // TYPE DE VERSEMENTS-->
-     <div class="versement__section">
+     <div class="versement__section" >
         <h2>Type de versement</h2> 
 
-          <div class="modalieVersement__section">
+          <div class="modaliteVersement__section">
              <h3>Modalité de versement</h3>
 
  <!-- // Versement unique -->
@@ -49,32 +51,33 @@
 
          </div>
          </div>
+  
 
       
 
    <!-- // TYPE DE MONTANT-->
 
-       <div class="montant__section">
+       <div class="montant__section" >
           <h3>Type de montant</h3>
           
 <!-- // Montant fixe -->
    
-         <div>
-            <label for="montantfixe__section" class="montantfixe__section">Montant prédéfinis:</label>
+    
+          <label for="montant__fixe1" class="montantfixe__section">Montant prédéfinis:</label>
 
-            <input type="radio" id="montant__fixe1" name="montant__fixe" value="montant__fixe" required>
-            <label for="montant__fixe">25</label>
+            <input type="radio" id="montant__fixe1" name="montant__fixe" value="25" required>
+            <label for="montant__fixe1">25</label>
 
-            <input type="radio" id="montant__fixe2" name="montant__fixe" value="montant__fixe" required>
-            <label for="montant__fixe">50</label>
+            <input type="radio" id="montant__fixe2" name="montant__fixe" value="50" required>
+            <label for="montant__fixe2">50</label>
 
-            <input type="radio" id="montant__fixe3" name="montant__fixe" value="montant__fixe" required>
-            <label for="montant__fixe">100</label>
+            <input type="radio" id="montant__fixe3" name="montant__fixe" value="100" required>
+            <label for="montant__fixe3">100</label>
 
-            <input type="radio" id="montant__fixe4" name="montant__fixe" value="montant__fixe" required>
-            <label for="montant__fixe">150</label>
+            <input type="radio" id="montant__fixe4" name="montant__fixe" value="150" required>
+            <label for="montant__fixe4">150</label>
 
-         </div>
+              
 
     
 
@@ -84,19 +87,20 @@
                     <input type="number" id="montant__variable" name="montant__variable" max="9999" >
                     <span id="erreur__montantvariable" class="message-erreur" role="alert" ></span> 
             </p>
-  </div>
+         </div>
+        </div>
       
 
 
-   <div class="coordonné__section">
+   <div class="coordonné__section" >
          <h2>Coordonnées</h2>
 
 
  <!-- // Email -->
                 <p>
-                    <label for="email" class="donateur__email">Courriel :</label>
-                    <input type="email" id="email" name="espace__email" autocomplete="email"  pattern="[\w\.\-]+@([\w\-]+)((\.(\w){2,3})+)$" required>
-                    <span id="erreur__email" class="erreur" role="alert" aria-live="polite" ></span>
+                    <label for="courriel" class="donateur__email">Courriel :</label>
+                    <input type="email" id="courriel" name="espace__email" autocomplete="email"  pattern="[\w\.\-]+@([\w\-]+)((\.(\w){2,3})+)$" required>
+                    <span id="erreur__courriel" class="message-erreur" role="alert" aria-live="polite" ></span>
                 </p>           
 
  <!-- //Nom -->
@@ -112,7 +116,7 @@
                    <label for="prenom" class="donateur__prenom">Prénom:</label>
                     <input type="text" id="prenom" name="espace__prenom" pattern="[a-zA-ZÀ-ÿ '\-]{3,29}"
                     title="Caractères alphanumérique & '-" required> 
-                    <span id="erreur__prenom" class="message-erreur" role="alert". aria-live="polite" ></span>
+                    <span id="erreur__prenom" class="message-erreur" role="alert" aria-live="polite" ></span>
               </p>    
 
 <!-- // Adresse -->
@@ -129,15 +133,27 @@
                    <label for="ville" class="donateur__ville">Ville:</label>
                     <input type="text" id="ville" name="espace__ville" pattern="[a-zA-ZÀ-ÿ '\-]{3,29}"
                     title="Caractères alphanumérique & '-" required> 
-                    <span id="erreur__ville" class="message-erreur" role="alert"aria-live="polite" ></span>
+                    <span id="erreur__ville" class="message-erreur" role="alert" aria-live="polite" ></span>
               </p>     
 
+        
+  <!-- //Pays-->
+               <p>
+                   <label for="pays" class="donateur__pays">Pays:</label>
+                   <select id="pays" name="espace__pays" required>
+                     <option value="">  Choisir votre pays </option>
+                     <option value="canada">Canada</option>
+                     <option value="france">France</option>
+                     <option value="etats-unis">États-Unis</option>
+                     <option value="autre">Autre</option>
+                   </select>
+              </p>       
 
-<!-- //Province-->
+   <!-- //Province-->
      
                <p>
-                   <label for="province" class="donateur__provinces">Pays:</label>
-                   <select id="provinces" name="espace__provinces" required>
+                   <label for="province" class="donateur__provinces">Province:</label>
+                   <select id="province" name="espace__provinces" required>
                      <option value="">  Choisir votre province </option>
                      <option value="alberta">Alberta</option>
                      <option value="manitoba">Manitoba</option>
@@ -149,34 +165,22 @@
                         <option value="Saskatchewan">Saskatchewan</option>
                    </select>
               </p>           
-
-
-  <!-- //Pays-->
-               <p>
-                   <label for="pays" class="donateur__pays">Pays:</label>
-                   <select id="pays" name="espace__pays" required>
-                     <option value="">  Choisir votre pays </option>
-                     <option value="canada">Canada</option>
-                     <option value="france">France</option>
-                     <option value="etats-unis">États-Unis</option>
-                     <option value="autre">Autre</option>
-                   </select>
-              </p>           
+    
 
 
  <!-- // Adresse -->
                     <p>
-                   <label for="label" class="donateur__codepostal">Code postal:</label>
-                    <input type="text" id="codePostal" name="espace__codePostal" pattern="^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ -]?\d[ABCEGHJ-NPRSTV-Z]\d$"
+                   <label for="codePostal" class="donateur__codepostal">Code postal:</label>
+                    <input type="text" id="codepostal" name="espace__codePostal" pattern="^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ -]?\d[ABCEGHJ-NPRSTV-Z]\d$"
                     title="Caractères alphanumérique & '-" required> 
-                    <span id="erreur__codePostal" class="message-erreur" role="alert" aria-live="polite" ></span>
+                    <span id="erreur__codepostal" class="message-erreur" role="alert" aria-live="polite" ></span>
                </p>
        
               
 
 <!-- // Entreprise  -->
                <p>
-                   <label for="label" class="donateur__entreprise"></label>Entreprise:</label>
+                   <label for="entreprise" class="donateur__entreprise">Entreprise:</label>
                     <input type="text" id="entreprise" name="espace__entreprise" pattern="[a-zA-ZÀ-ÿ '\-]{3,29}"
                     title="Caractères alphanumérique & '-" required> 
                     <span id="erreur__entreprise" class="message-erreur" role="alert" aria-live="polite"></span>
@@ -188,9 +192,11 @@
 
     <button type="button" class="bouton__precedent">Précédent</button>
     <button type="button"  class="bouton__suivant">Suivant</button>
- 
-      </fieldset>
 
+ </fieldset>
+     
+
+ <!-- //        DEUXIEME ETAPE DU FORMULAIRE                  // -->
 
      <fieldset class="etape2">
            <legend>  <h1>Information sur le paiement</h1> </legend>
@@ -206,29 +212,33 @@
 
 
  <!-- // Numéro de carte de credit -->
+  <div class="informationPaiement__section">
+     <h2>Information sur le paiement</h2>
+
               <p>
-                   <label for="label" class="info__numeroCarte">Numéro de carte:</label>
+                   <label for="numeroCarte" class="info__numeroCarte">Numéro de carte:</label>
                     <input  inputmode="numeric"  id="numeroCarte" name="espace__numeroCarte" pattern="^4[0-9]{12}(?:[0-9]{3})?$" maxlength="16" 
                     title="Caractères alphanumérique & '-" required> 
-                    <span id="erreur__numeroCarte" class="message-erreur" role="alert" aria-live="polite"></span>
+                    <span id="erreur__numerocarte" class="message-erreur" role="alert" aria-live="polite"></span>
               </p>
               
 <!-- // Expiration de la carte de crédit -->
                <p>
-                   <label for="label" class="info__expirationCarte">Date d’expiration:</label>
+                   <label for="expirationCarte" class="info__expirationCarte">Date d’expiration:</label>
                     <input type="text" id="expirationCarte" name="espace__expirationCarte"  pattern="^(0[1-9]|1[0-2]) \/ \d{2}$" 
                     title="Caractères alphanumérique & '-" required> 
-                    <span id="erreur__expirationCarte" class="message-erreur" role="alert" aria-live="polite"></span>
+                    <span id="erreur__expirationcarte" class="message-erreur" role="alert" aria-live="polite"></span>
            
               </p>
 
 <!-- // Validation de la carte de crédit -->
                <p>
-                   <label for="label" class="info__expirationCarte"> Code de sécurité:</label>
+                   <label for="validationCarte" class="info__expirationCarte"> Code de sécurité:</label>
                     <input type="text" id="validationCarte" name="espace__validationCarte" pattern="[0-9]{3,4}" maxlength="4" 
                     title="Caractères alphanumérique & '-" required> 
-                    <span id="erreur__validationCarte" class="message-erreur" role="alert "aria-live="polite" ></span>
+                    <span id="erreur__validationcarte" class="message-erreur" role="alert" aria-live="polite" ></span>
               </p>
+            </div>
 
                <button type="button" class="bouton__precedent">Précédent</button>
                <button type="button" class="bouton__suivant">Suivant</button>
@@ -236,18 +246,18 @@
       </fieldset>
 
 
+       <!-- //        TROISIEME ETAPE DU FORMULAIRE                  // -->
+
      <fieldset class="etape3">
            <legend>  <h1>Résumé du don</h1> </legend>
 
                <button type="button"  class="bouton__precedent">Précédent</button>
-                   <button type="submit" class="button__soumettre">Soumettre</button>
+               <button type="submit" class="button__soumettre">Soumettre</button>
 
      </fieldset>
  
-
-    </main>
-    </form>
-
+   </form>
+   </main>
 
 </body>
 </html>
