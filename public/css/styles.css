@@ -27,6 +27,7 @@
  */
 /** LIBRAIRIES **/
 /* Normalize */
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&family=Tiny5&display=swap");
 /*! normalize.scss v0.1.0 | MIT License | based on git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -425,7 +426,7 @@ th {
 }
 /** Palette de couleurs **/
 /* Couleurs de base */
-/* Autres couleurs */
+/* Fonts Formulaire*/
 /** Points de rupture **/
 /**
 * @author Ève Février - efevrier@cegep-ste-foy.qc.ca
@@ -508,7 +509,7 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 16px; /* 16px pour toutes les largeurs d'écran */
   font-size: 1.6rem;
   line-height: 1.375; /* facteur multiplicateur de la taille de la police 1.375x16=22 */
@@ -571,7 +572,7 @@ h3--desktop,
 }
 
 .texte {
-  font-family: Arial, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 16px;
   font-size: 1.6rem;
   line-height: 1.375;
@@ -640,6 +641,7 @@ h3--desktop,
   display: none;
 }
 
+/*  --------------MOBILE FIRST----------------  */
 .etapes__section {
   display: flex;
   justify-content: center;
@@ -679,6 +681,30 @@ h3--desktop,
 body {
   background: #7d2e33;
 }
+body h1 {
+  font-family: "Carter One", system-ui;
+  color: #ffffff;
+  text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000, 1px 1px 0 #000000;
+}
+body h2 {
+  font-family: "Carter One", system-ui;
+  text-align: center;
+}
+body h3 {
+  font-family: "Carter One", system-ui;
+}
+body p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body a {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body span {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body label {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
 
 fieldset {
   background: #7fa0ca;
@@ -691,6 +717,12 @@ fieldset {
 }
 .versement__section h2 {
   margin: 0;
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+.versement__section h3 {
+  text-decoration: underline;
+  text-align: center;
 }
 
 .coordonné__section {
@@ -721,7 +753,12 @@ fieldset {
   padding: 1.5rem;
   border-radius: 2rem;
 }
+.formulaire__section fieldset h1 {
+  padding-top: 1.5rem;
+}
 .formulaire__section fieldset legend {
+  height: auto;
+  display: inline-block;
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -730,6 +767,26 @@ fieldset {
 }
 .formulaire__section fieldset input:hover {
   background-color: rgba(91, 127, 170, 0.4196078431);
+}
+
+input[type=radio] + label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.8em;
+  padding: 1em;
+  background: #7fa0ca;
+  margin: 0.5em;
+}
+
+input[type=radio]:hover + label {
+  background: #6b89b1;
+  transition: 0.3s ease;
+}
+
+input[type=radio]:checked + label {
+  background: #466183;
+  color: #ffffff;
 }
 
 .bouton__precedent {
@@ -767,10 +824,26 @@ fieldset {
   background-color: #05204c;
 }
 
+/*  ----------------------FORMAT TABLE---------------  */
 @media (min-width: 361px) {
   .formulaire__section fieldset {
     max-width: 45rem;
     padding: 2rem;
+  }
+  .versement__section {
+    background: #b2c9ee;
+    border-radius: 1rem;
+    padding: 2rem;
+  }
+  .versement__section h2 {
+    margin: 0;
+    padding-bottom: 1.5rem;
+  }
+  .versement__section h3 {
+    text-align: left;
+  }
+  input[type=radio] + label {
+    display: inline-block;
   }
 }
 

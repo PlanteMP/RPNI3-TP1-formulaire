@@ -9,6 +9,12 @@ $blanc: #ffffff;
 $couleur-bouton: #22355a;
 $couleur-boutonhover:  #05204c;
 $bleuInputHover: #5b7faa6b;
+$bleuOverRadio:  #6b89b1;
+
+
+$fontePrincipale: "Carter One", system-ui;
+$fonteSecondaire: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 
 
 /**
@@ -63,9 +69,10 @@ $bleuInputHover: #5b7faa6b;
 
 
 
-// MOBILE FIRST
 
-//* Span Etape de section *//
+/*  --------------MOBILE FIRST----------------  */
+
+//* SPAN DES 3 ÉTAPES et mise en évidence *//
 
 .etapes__section {
   display: flex;
@@ -104,11 +111,37 @@ $bleuInputHover: #5b7faa6b;
   transition: 0.3s ease;
 }
 
-//* Page background et couleur de base *//
+//* BACKGROUND DE PAGE ET COULEUR GENERAL  *//
 
 body {
   background: $rougeVin;
-  
+
+    h1 {
+    font-family: $fontePrincipale;
+    color: $blanc;
+    text-shadow: -1px -1px 0 $noir, 1px -1px 0 $noir, -1px 1px 0 $noir, 1px 1px 0 $noir;
+ 
+  }
+  h2 {
+     font-family: $fontePrincipale;
+        text-align: center;  
+  }
+
+  h3 {
+     font-family: $fontePrincipale;
+  }
+  p {
+      font-family: $fonteSecondaire;
+  }
+  a {
+    font-family: $fonteSecondaire;
+  }
+  span {
+    font-family: $fonteSecondaire;
+  }
+  label {
+    font-family: $fonteSecondaire;
+  }
 }
 
 fieldset {
@@ -118,8 +151,7 @@ fieldset {
 }
 
 
-
-// Section informations - TYPE VERSEMENT, COORDONNÉES, INFO PAIEMENT, RESUME DU DON
+// Section contenant de l'informations - TYPE VERSEMENT, COORDONNÉES, INFO DU PAIEMENT, RÉSUME DU DON
 .versement__section {
 background: $bleuPale;
   border-radius: 1rem;
@@ -127,9 +159,17 @@ background: $bleuPale;
 
   h2 {
     margin:0;
+    padding-bottom: 1.5rem;
+        text-align: center;
 
   }
+
+  h3 {
+       text-decoration: underline;
+           text-align: center;
+  }
 }
+
 .coordonné__section {
 background: $bleuPale;
   border-radius: 1rem;
@@ -147,15 +187,13 @@ background: $bleuPale;
   
 }
 
-
-
-//* Fieldset *//
+//     FIELDSET    //
 .formulaire__section {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  
+
 
   fieldset {
     width: 100%;
@@ -163,11 +201,15 @@ background: $bleuPale;
     margin: 0 auto;
     padding: 1.5rem;
     border-radius: 2rem;
-    
-   
+
+    h1 {
+padding-top: 1.5rem;
+    }
+  
 
     legend { 
- 
+      height: auto;
+      display: inline-block;
       text-align: center;
       margin-bottom: 1rem;
    
@@ -184,7 +226,34 @@ background: $bleuPale;
   }
 }
 
-// BOUTONS 
+
+//       BOUTONS RADIOS         //
+
+input[type="radio"] + label {
+  display: flex;
+  justify-content: center; 
+  align-items: center;  
+  border-radius: 0.8em;
+  padding: 1em;
+  background:$bleufoncer;
+  margin: 0.5em;
+
+}
+
+input[type="radio"]:hover+ label {
+ background:$bleuOverRadio;
+  transition: 0.3s ease;
+
+}
+
+input[type="radio"]:checked + label {
+  background: $bleuStroke;
+  color: $blanc;
+}
+
+
+
+//         BOUTONS           //
 
 .bouton__precedent {
   background-color: $couleur-bouton;
@@ -193,6 +262,8 @@ background: $bleuPale;
   padding: 0.5em 1em;
   text-decoration: none;
   padding-top: 1rem;  
+  
+  
 
   &:hover {
     background-color: $couleur-boutonhover;
@@ -231,17 +302,48 @@ background: $bleuPale;
 
 
 
+/*  ----------------------FORMAT TABLE---------------  */
 
 
-// FORMAT TABLE
-//* Fieldset *//
+
 @media (min-width: 361px) {
+
+  //*   Fieldset      *//
   .formulaire__section {
     fieldset {
       max-width: 45rem; 
       padding: 2rem;
 
-   
+
     }
   }
+
+ //* Alignement des boutons *//
+  .versement__section {
+background: $bleuPale;
+  border-radius: 1rem;
+  padding: 2rem;
+
+  h2 {
+    margin:0;
+    padding-bottom: 1.5rem;
+   
+
+  }
+
+  h3 {
+   
+           text-align: left;
+  }
+}
+
+
+//       BOUTONS RADIOS         //
+
+
+  input[type="radio"] + label {
+  display: inline-block;
+
+}
+
 }

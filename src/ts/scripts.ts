@@ -21,7 +21,15 @@ let boutonSuivant = document.querySelectorAll<HTMLButtonElement>(".bouton__suiva
 let boutonSoumettre = document.querySelector<HTMLButtonElement>(".bouton__soumettre");
 
 
-// Inatialisation du formulaire
+//Declaration des variables  --- Récuperer les champs 
+const prenom = document.getElementById("prenom") as HTMLInputElement;
+const nom = document.getElementById("nom") as HTMLInputElement;
+const courriel = document.getElementById("courriel") as HTMLInputElement;
+
+
+
+// Inatialisation du formulaire & EvenListener declancher au 'click'
+
 function initialisationFormulaire(): void {
     let elementsEtat = document.querySelectorAll('.etat-etape');
 
@@ -39,15 +47,16 @@ function initialisationFormulaire(): void {
     });
 
 }
-// Changement d'etapes
-function afficherEtape(): void {
+// Changement d'etapes -- Function ajouter la classe cacher
 
+function afficherEtape(): void {
     fieldsets.forEach((fieldset) => {
         fieldset.classList.add("cacher");
     });
 
 
-    // États des étapes
+    // États des étapes -- Mise en evidence
+
     const elementsEtat = document.querySelectorAll('.etat-etape');
     elementsEtat.forEach((element) => {
         element.classList.remove('etat-etape--mise-en-evidence');
@@ -58,7 +67,7 @@ function afficherEtape(): void {
     }
 
 
-    // Boutons
+    // Boutons -- Disparition en etat "cacher" pour qu’ils s’affichent que lorsque nécessaires
 
     if (etape >= 0 && etape < fieldsets.length) {
         fieldsets[etape].classList.remove("cacher");
@@ -91,7 +100,7 @@ function afficherEtape(): void {
 
 
 
-// Changement navigation suivante 
+// Changement navigation suivante -- Change au fieldset suivant
 
 function navigationSuivante(event: MouseEvent): void {
     event.preventDefault();
@@ -101,7 +110,7 @@ function navigationSuivante(event: MouseEvent): void {
     }
 }
 
-// Changement navigation précédente
+// Changement navigation précédente -- Change au fieldset precedent
 
 function navigationPrecedente(event: MouseEvent): void {
     event.preventDefault();

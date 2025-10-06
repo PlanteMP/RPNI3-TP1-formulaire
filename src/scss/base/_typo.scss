@@ -1,5 +1,6 @@
 @use "../utilitaires/mixins";
 @use "../utilitaires/variables";
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Tiny5&display=swap');
 
 /**
 * @author Prenom Nom courriel
@@ -9,6 +10,11 @@
 */
 
 /**** Typographie responsive ****/
+
+
+$fontePrincipale: "Carter One", system-ui;
+$fonteSecondaire: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 
 html {
   font-size: 62.5%;

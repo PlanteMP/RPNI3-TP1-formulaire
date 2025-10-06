@@ -11,7 +11,11 @@ let fieldsets;
 let boutonPrecedent = document.querySelectorAll(".bouton__precedent");
 let boutonSuivant = document.querySelectorAll(".bouton__suivant");
 let boutonSoumettre = document.querySelector(".bouton__soumettre");
-// Inatialisation du formulaire
+//Declaration des variables  --- Récuperer les champs 
+const prenom = document.getElementById("prenom");
+const nom = document.getElementById("nom");
+const courriel = document.getElementById("courriel");
+// Inatialisation du formulaire & EvenListener declancher au 'click'
 function initialisationFormulaire() {
     let elementsEtat = document.querySelectorAll('.etat-etape');
     fieldsets = form.querySelectorAll("fieldset");
@@ -25,12 +29,12 @@ function initialisationFormulaire() {
         });
     });
 }
-// Changement d'etapes
+// Changement d'etapes -- Function ajouter la classe cacher
 function afficherEtape() {
     fieldsets.forEach((fieldset) => {
         fieldset.classList.add("cacher");
     });
-    // États des étapes
+    // États des étapes -- Mise en evidence
     const elementsEtat = document.querySelectorAll('.etat-etape');
     elementsEtat.forEach((element) => {
         element.classList.remove('etat-etape--mise-en-evidence');
@@ -38,7 +42,7 @@ function afficherEtape() {
     if (etape >= 0 && etape < elementsEtat.length) {
         elementsEtat[etape].classList.add('etat-etape--mise-en-evidence');
     }
-    // Boutons
+    // Boutons -- Disparition en etat "cacher" pour qu’ils s’affichent que lorsque nécessaires
     if (etape >= 0 && etape < fieldsets.length) {
         fieldsets[etape].classList.remove("cacher");
     }
@@ -62,7 +66,7 @@ function afficherEtape() {
 /*
  * Fonction pour valider les champs
  */
-// Changement navigation suivante 
+// Changement navigation suivante -- Change au fieldset suivant
 function navigationSuivante(event) {
     event.preventDefault();
     if (etape < fieldsets.length - 1) {
@@ -70,7 +74,7 @@ function navigationSuivante(event) {
         afficherEtape();
     }
 }
-// Changement navigation précédente
+// Changement navigation précédente -- Change au fieldset precedent
 function navigationPrecedente(event) {
     event.preventDefault();
     if (etape > 0) {

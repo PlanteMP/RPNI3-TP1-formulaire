@@ -31,7 +31,9 @@
          <!-- //        PREMIERE ETAPE DU FORMULAIRE                  // -->
 
        <fieldset class="etape1" >
-        <legend>  <h1>Information sur le don</h1> </legend>
+        
+        <legend>  <img id="patte1" src="/src/images/patte_table.svg" alt="patte de chat décorative"> <h1>Information sur le don</h1> </legend>
+
 
    <!-- // TYPE DE VERSEMENTS-->
      <div class="versement__section" >
@@ -42,11 +44,11 @@
 
  <!-- // Versement unique -->
          <div>
-            <input type="radio" id="versement__unique" name="versement__infos" value="versement__unique" required>
+            <input type="radio" id="versement__unique" class="cacher" name="versement__infos" value="versement__unique" required>
             <label for="versement__unique">Don unique</label>
 
  <!-- // Versements periodiques -->
-            <input type="radio" id="versement__periodiques" name="versement__infos" value="versement__periodiques" required>
+            <input type="radio" id="versement__periodiques" class="cacher" name="versement__infos" value="versement__periodiques" required>
             <label for="versement__periodiques">Dons mensuels</label>
 
          </div>
@@ -65,19 +67,17 @@
     
           <label for="montant__fixe1" class="montantfixe__section">Montant prédéfinis:</label>
 
-            <input type="radio" id="montant__fixe1" name="montant__fixe" value="25" required>
-            <label for="montant__fixe1">25</label>
+            <input type="radio" id="montant__fixe1" class="cacher" name="montant__fixe" value="25" required>
+            <label for="montant__fixe1">25$</label>
 
-            <input type="radio" id="montant__fixe2" name="montant__fixe" value="50" required>
-            <label for="montant__fixe2">50</label>
+            <input type="radio" id="montant__fixe2" class="cacher" name="montant__fixe" value="50" required>
+            <label for="montant__fixe2">50$</label>
 
-            <input type="radio" id="montant__fixe3" name="montant__fixe" value="100" required>
-            <label for="montant__fixe3">100</label>
+            <input type="radio" id="montant__fixe3" class="cacher" name="montant__fixe" value="100" required>
+            <label for="montant__fixe3">75$</label>
 
-            <input type="radio" id="montant__fixe4" name="montant__fixe" value="150" required>
-            <label for="montant__fixe4">150</label>
-
-              
+            <input type="radio" id="montant__fixe4" class="cacher" name="montant__fixe" value="150" required>
+            <label for="montant__fixe4">100$</label>
 
     
 
@@ -171,7 +171,7 @@
  <!-- // Adresse -->
                     <p>
                    <label for="codePostal" class="donateur__codepostal">Code postal:</label>
-                    <input type="text" id="codepostal" name="espace__codePostal" pattern="^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ -]?\d[ABCEGHJ-NPRSTV-Z]\d$"
+                    <input type="text" id="codePostal" name="espace__codePostal" pattern="^[ABCEGHJ-NPRSTVXY]\d[ABCEGHJ-NPRSTV-Z][ -]?\d[ABCEGHJ-NPRSTV-Z]\d$"
                     title="Caractères alphanumérique & '-" required> 
                     <span id="erreur__codepostal" class="message-erreur" role="alert" aria-live="polite" ></span>
                </p>
@@ -199,7 +199,7 @@
  <!-- //        DEUXIEME ETAPE DU FORMULAIRE                  // -->
 
      <fieldset class="etape2">
-           <legend>  <h1>Information sur le paiement</h1> </legend>
+           <legend> <img id="patte2" src="/src/images/patte_table.svg" alt="patte de chat décorative"> <h1>Information sur le paiement</h1> </legend>
 
 
  <!-- // Nom sur la carte-->
@@ -249,7 +249,7 @@
        <!-- //        TROISIEME ETAPE DU FORMULAIRE                  // -->
 
      <fieldset class="etape3">
-           <legend>  <h1>Résumé du don</h1> </legend>
+           <legend>  <img id="patte3" src="/src/images/patte_table.svg" alt="patte de chat décorative"> <h1>Résumé du don</h1> </legend>
 
                <button type="button"  class="bouton__precedent">Précédent</button>
                <button type="submit" class="button__soumettre">Soumettre</button>
@@ -258,6 +258,7 @@
  
    </form>
    </main>
+   
 
 </body>
 </html>
